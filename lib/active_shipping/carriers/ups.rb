@@ -492,6 +492,12 @@ module ActiveShipping
               if options[:international]
                 build_international_forms(xml, origin, destination, packages, options)
               end
+
+              if options[:carbon_neutral]
+                xml.UPScarbonneutralIndicator do
+                  xml.Code(1)
+                end
+              end
             end
 
             # A request may specify multiple packages.
