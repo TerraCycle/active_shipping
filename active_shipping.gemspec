@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency("prawn")
   s.add_dependency("prawn-templates")
   s.add_dependency("mechanize")
+  s.add_dependency("rexml")
 
   s.add_development_dependency("minitest")
   s.add_development_dependency("minitest-reporters")

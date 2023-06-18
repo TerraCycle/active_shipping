@@ -550,7 +550,7 @@ module ActiveShipping
       message = response_message(xml)
 
       response_info = Hash.from_xml(response)
-      tracking_number = xml.css("CompletedPackageDetails TrackingIds TrackingNumber").text
+      tracking_number = xml.css("CompletedPackageDetails OperationalDetail Barcodes StringBarcodes Value").text
       base_64_image = xml.css("Label Image").text
 
       labels = [Label.new(tracking_number, Base64.decode64(base_64_image))]
