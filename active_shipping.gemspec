@@ -21,13 +21,14 @@ Gem::Specification.new do |s|
 
 
   s.add_dependency("measured", ">= 2.0")
-  s.add_dependency("activesupport", ">= 4.2", "< 6.1")
-  s.add_dependency("active_utils", "~> 3.3.1")
+  s.add_dependency("activesupport", ">= 4.2", "< 7.2")
+  s.add_dependency("active_utils", "~> 3.4.0")
   s.add_dependency("nokogiri", ">= 1.6")
   s.add_dependency("mini_magick")
   s.add_dependency("prawn")
   s.add_dependency("prawn-templates")
   s.add_dependency("mechanize")
+  s.add_dependency("rexml")
 
   s.add_development_dependency("minitest")
   s.add_development_dependency("minitest-reporters")

@@ -1,5 +1,10 @@
 # ActiveShipping CHANGELOG
 
+### v2.3.0
+- Add support for Rails 7
+- Restore UPS integration
+- Add DHL integration
+
 ### v2.2.0
 - Remove UPS integration from ActiveShipping repository as requested by UPS. For information about the UPS APIs see https://www.ups.com/upsdeveloperkit
 

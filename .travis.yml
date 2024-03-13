@@ -12,6 +12,7 @@ gemfile:
 - gemfiles/activesupport50.gemfile
 - gemfiles/activesupport51.gemfile
 - gemfiles/activesupport52.gemfile
+- gemfiles/activesupport70.gemfile
 
 matrix:
   include:

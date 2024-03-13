@@ -46,6 +46,7 @@ module ActiveShipping
                 :recipient_email,
                 :recipient_bcc,
                 :merchant_account_id,
+                :merchant_account_code,
                 :mid
 
     def initialize(options = {})
@@ -140,7 +141,7 @@ module ActiveShipping
     # Order number. This will appear on the generated label.
     # <em>Optional</em>.
     def packaging_information=(v)
-      @packaging_information = validate_string_length(v, 15, __method__)
+      @packaging_information = validate_string_length(v, 17, __method__)
     end
 
     # Override address if more address information
@@ -321,7 +322,7 @@ module ActiveShipping
           xml.CustomerZipCode { xml.text(customer_zipcode) } if customer_zipcode
           xml.CustomerUrbanization { xml.text(customer_urbanization) } if customer_urbanization
 
-          xml.MerchantAccountID { xml.text(merchant_account_id) }
+          xml.MerchantAccountCode { xml.text(merchant_account_code) }
           xml.MID { xml.text(mid) }
 
           xml.SenderName { xml.text(sender_name) } if sender_name

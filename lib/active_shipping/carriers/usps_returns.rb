@@ -8,10 +8,10 @@ module ActiveShipping
     @@name = "USPS Returns"
 
     LIVE_DOMAIN = 'returns.usps.com'
-    LIVE_RESOURCE = 'Services/ExternalCreateReturnLabel.svc/ExternalCreateReturnLabel'
+    LIVE_RESOURCE = 'services/GetLabel'
 
     TEST_DOMAIN = 'returns.usps.com'
-    TEST_RESOURCE = 'Services/ExternalCreateReturnLabel.svc/ExternalCreateReturnLabel'
+    TEST_RESOURCE = 'services/GetLabel'
 
     API_CODES = {
       :external_return_label_request => 'externalReturnLabelRequest'
