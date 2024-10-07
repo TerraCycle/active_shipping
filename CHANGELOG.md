@@ -1,3 +1,5 @@
+- Fix DHL XML builder
+
 # ActiveShipping CHANGELOG
 
 ### v2.3.0
