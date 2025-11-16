@@ -1,3 +1,4 @@
+- Add display_tracking_number to labels
 - Fix DHL XML builder
 
 # ActiveShipping CHANGELOG
