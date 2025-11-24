@@ -6,7 +6,7 @@ require 'mechanize'
 module ActiveShipping
   class Label
     attr_reader :img_data
-    attr_accessor :tracking_number, :path, :carrier, :plates, :file_type
+    attr_accessor :tracking_number, :display_tracking_number, :path, :carrier, :plates, :file_type
 
     def initialize(tracking_number, img_data)
       @tracking_number = tracking_number
@@ -55,7 +55,7 @@ module ActiveShipping
       image_directory = Rails.root.join('public', 'system', 'shipping_labels', @carrier.to_s)
 
       FileUtils.mkdir_p(image_directory)
-      @path = File.join(image_directory, "#{tracking_number}.#{file_type}")
+      @path = File.join(image_directory, "#{@display_tracking_number || tracking_number}.#{file_type}")
     end
 
     # Writes out the label image
