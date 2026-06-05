@@ -3,6 +3,7 @@ module ActiveShipping #:nodoc:
     ADDRESS_TYPES = %w(residential commercial po_box)
 
     ATTRIBUTE_ALIASES = {
+      id: [:id],
       name: [:name],
       country: [:country_code, :country],
       postal_code: [:postal_code, :zip, :postal],
@@ -19,6 +20,7 @@ module ActiveShipping #:nodoc:
     }.freeze
 
     attr_reader :options,
+                :id,
                 :country,
                 :postal_code,
                 :province,
@@ -47,6 +49,7 @@ module ActiveShipping #:nodoc:
         ActiveUtils::Country.find(options[:country])
       end
 
+      @id = options[:id]
       @postal_code = options[:postal_code] || options[:postal] || options[:zip]
       @province = options[:province] || options[:state] || options[:territory] || options[:region]
       @city = options[:city]
