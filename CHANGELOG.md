@@ -1,7 +1,9 @@
+# ActiveShipping CHANGELOG
+
+### v2.4.0
+- Add id field to Location
 - Add display_tracking_number to labels
 - Fix DHL XML builder
-
-# ActiveShipping CHANGELOG
 
 ### v2.3.0
 - Add support for Rails 7
